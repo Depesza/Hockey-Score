@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hockey Score</string>
+    <string name="teamA">Team A</string>
+    <string name="teamB">Team B</string>
+    <string name="goal">Goal!</string>
+    <string name="reset">Reset</string>
+    <string name="penalty">Penalty minutes (total)</string>
+    <string name="zero">0</string>
+    <string name="minpen">2 min penalty</string>
+    <string name="majpen">5 min penalty</string>
+    <string name="puck">Hockey puck</string>
+</resources>
