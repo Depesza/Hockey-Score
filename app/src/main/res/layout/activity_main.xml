@@ -1,9 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="com.example.android.hockeyscore.MainActivity">
 
     <LinearLayout
+        android:id="@+id/top_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -97,37 +99,6 @@
 
         </LinearLayout>
 
-
-        <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal">-->
-
-            <!--<ImageView-->
-                <!--android:layout_width="48sp"-->
-                <!--android:layout_height="48sp"-->
-                <!--android:contentDescription="@string/puck"-->
-                <!--android:src="@drawable/hockey2"-->
-                <!--android:layout_alignStart="@id/penalty"/>-->
-            <!--<TextView-->
-                <!--android:id="@+id/penalty"-->
-                <!--android:layout_centerInParent="true"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:fontFamily="sans-serif-medium"-->
-                <!--android:gravity="center"-->
-                <!--android:padding="20dp"-->
-                <!--android:text="@string/penalty"-->
-                <!--android:textColor="#616161"-->
-                <!--android:textSize="14sp" />-->
-            <!--<ImageView-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_width="48sp"-->
-                <!--android:layout_height="48sp"-->
-                <!--android:contentDescription="@string/puck"-->
-                <!--android:src="@drawable/hockey2" />-->
-        <!--</RelativeLayout>-->
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,25 +106,27 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48sp"
+                android:layout_weight="1"
                 android:contentDescription="@string/puck"
                 android:src="@drawable/hockey2" />
+
             <TextView
                 android:id="@+id/penalty"
-                android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="20dp"
                 android:text="@string/penalty"
                 android:textColor="#616161"
                 android:textSize="14sp" />
+
             <ImageView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48sp"
+                android:layout_weight="1"
                 android:contentDescription="@string/puck"
                 android:src="@drawable/hockey2" />
         </LinearLayout>
@@ -243,39 +216,39 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="48sp"
-            android:layout_height="48sp"
-            android:contentDescription="@string/puck"
-            android:src="@drawable/puck2" />
-
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:onClick="reset"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:text="@string/reset" />
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="48sp"
-            android:layout_height="48sp"
-            android:contentDescription="@string/puck"
-            android:src="@drawable/puck2" />
+            <ImageView
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:layout_weight="1"
+                android:contentDescription="@string/puck"
+                android:src="@drawable/puck2" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_weight="2"
+                android:onClick="reset"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/reset" />
+
+            <ImageView
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:layout_weight="1"
+                android:contentDescription="@string/puck"
+                android:src="@drawable/puck2" />
+
+        </LinearLayout>
     </LinearLayout>
 
 
-</RelativeLayout>
+</ScrollView>

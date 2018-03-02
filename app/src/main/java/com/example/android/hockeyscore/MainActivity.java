@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView team_a_score, team_b_score, team_a_fouls, team_b_fouls
+
     int scoreA = 0;
     int scoreB = 0;
     int foulsA = 0;
@@ -16,30 +18,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA();
+
+        team_a_score = findViewById(R.id.team_a_score);
+        team_b_score = findViewById(R.id.team_b_score);
+        team_a_fouls = findViewById(R.id.team_a_fouls);
+        team_b_fouls = findViewById(R.id.team_b_fouls);
     }
 
-    /**
-     * Displays the given score for Team A.
-     */
+    public void display(TextView text, int number){
+        text.setText(String.valueOf(number));
+    }
+
     public void displayForTeamA() {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(scoreA));
+        display(team_a_score, scoreA);
     }
 
     public void displayForTeamB() {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(scoreB));
+        display(team_b_score, scoreB);
     }
 
     public void displayFoulsForTeamA() {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_fouls);
-        scoreView.setText(String.valueOf(foulsA));
+        display(team_a_fouls, foulsA);
     }
 
     public void displayFoulsForTeamB() {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_fouls);
-        scoreView.setText(String.valueOf(foulsB));
+        display(team_b_fouls, foulsB);
     }
 
     public void increment(View view) {
