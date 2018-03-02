@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.lang.reflect.Method;
+
 public class MainActivity extends AppCompatActivity {
 
-    TextView team_a_score, team_b_score, team_a_fouls, team_b_fouls
+    TextView team_a_score, team_b_score, team_a_fouls, team_b_fouls;
 
     int scoreA = 0;
     int scoreB = 0;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.activity_main);
 
         team_a_score = findViewById(R.id.team_a_score);
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         foulsB = foulsB + 5;
         displayFoulsForTeamB();
     }
+
 
     public void reset(View view) {
         scoreB = 0;
